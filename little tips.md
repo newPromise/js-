@@ -18,4 +18,14 @@ var str = 'string';
 console.log(str.indexOf('r')); // 2
 ```
 对于使用 `indexOf` 我们可以使用 `~indexOf() ` 来实现
- 
+> `~` 这个字符可以用于按位取反
+```
+console.log(~ -1) // 0
+```  
+因此我们可以这样计算:  
+
+```
+if (!~str.indexOf('d')) {
+
+}
+```
