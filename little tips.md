@@ -29,3 +29,19 @@ if (!~str.indexOf('d')) {
 }
 ```
 使用  `~str.indexOf()` 如果 没有找到返回 0 , 在js 中 0 会被强制类型转换为 false ,使用这种操作就不用判断是否找到， 如果没有找到就返回 -1 了
+### 使用 `call` 改变 this 的指向，要注意要使用作用域安全的构造函数
+```
+function person(name,age) {
+    if (this instanceOf person) {
+         this.name = name;
+         this.age = age;
+    } else {
+         return new peron(name, age)
+    }
+}
+```
+上面这种方法是为了 调用构造函数的是时候 因为 粗心导致的调用构造函数的时候忘记加 `new` 操作符  
+
+###  `instanceOf ` 和  `typeOf` 的区别  
+`typeOf` 用来判断变量属于哪一种类型，通过使用这种方法判断出来的几种基本类型分别是： `number` `boolean` `string` `object`  `function` `undefined` 这五种基本类型  
+`instanceOf` 用来判断 变量是否属于某种基本类型， 这种方法返回的是布尔值， 使用 `instanceOf` 只能判断 对象和函数，不能判断字符串或者数字  
