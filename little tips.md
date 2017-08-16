@@ -17,15 +17,15 @@ var str = 'string';
 console.log(str.indexOf('r')); // 2
 ```
 对于使用 `indexOf` 我们可以使用 `~indexOf() ` 来实现
-> `~` 这个字符可以用于按位取反
+> `~` 这个字符可以用于按位取反 >
+
 ```
-console.log(~ -1) // 0
-```  
+console.log(~ -1)
+```
 因此我们可以这样计算:  
 
 ```
 if (!~str.indexOf('d')) {
-    // 要进行执行的函数
 }
 ```
 使用  `~str.indexOf()` 如果 没有找到返回 0 , 在js 中 0 会被强制类型转换为 false ,使用这种操作就不用判断是否找到， 如果没有找到就返回 -1 了
