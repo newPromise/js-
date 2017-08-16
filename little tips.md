@@ -45,5 +45,6 @@ function person(name,age) {
 上面这种方法是为了 调用构造函数的是时候 因为 粗心导致的调用构造函数的时候忘记加 `new` 操作符  
 
 ###  `instanceOf ` 和  `typeOf` 的区别  
-`typeOf` 用来判断变量属于哪一种类型，通过使用这种方法判断出来的几种基本类型分别是： `number` `boolean` `string` `object`  `function` `undefined` 这五种基本类型  
-`instanceOf` 用来判断 变量是否属于某种基本类型， 这种方法返回的是布尔值， 使用 `instanceOf` 只能判断 对象和函数，不能判断字符串或者数字  
+`typeOf` 用来判断变量属于哪一种类型，通过使用这种方法判断出来的几种基本类型分别是： `number` `boolean` `string` `object`  `function` `undefined` 这五种基本类型  
+~~`instanceOf` 用来判断 变量是否属于某种基本类型~~， 这种方法返回的是布尔值， 使用 `instanceOf` 只能判断 对象和函数，不能判断字符串或者数字 
+> `instanceOf ` 这个检测方法，左边是待检测类的对象，右边是类的构造函数，实际上，使用 `instanceOf` 实现的应该是判断继承关系，我们使用 new 操作符进行继承构造函数的时候，使用的也是继承的用法
