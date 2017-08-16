@@ -30,6 +30,7 @@ if (!~str.indexOf('d')) {
 ```
 使用  `~str.indexOf()` 如果 没有找到返回 0 , 在js 中 0 会被强制类型转换为 false ,使用这种操作就不用判断是否找到， 如果没有找到就返回 -1 了
 ### 使用 `call` 改变 this 的指向，要注意要使用作用域安全的构造函数
+
 ```
 function person(name,age) {
     if (this instanceOf person) {
@@ -40,6 +41,7 @@ function person(name,age) {
     }
 }
 ```
+
 上面这种方法是为了 调用构造函数的是时候 因为 粗心导致的调用构造函数的时候忘记加 `new` 操作符  
 
 ###  `instanceOf ` 和  `typeOf` 的区别  
