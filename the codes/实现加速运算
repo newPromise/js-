@@ -1,0 +1,90 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="con">
+    <p class="title">加速器</p>
+    <p>显示数值<input id="num"></p>
+    <div class="btn">
+        <span id="add" >数值加0.01</span>
+        <span id="dec">数值减0.01</span>
+    </div>
+
+    <input id="num2">
+    <button id="btn2">点击按钮</button>
+</div>
+<script type="text/ecmascript">
+    window.onload = function () {
+
+        var add =document.getElementById('add');
+        var num = document.getElementById('num');
+        var dec = document.getElementById('dec');
+        num.value = 0;
+        var timer;
+        var time = 1000;
+        function toAdd (add = false) {
+            console.log('事件次数', time);
+            time <= 0 ? time = 0 : time = time -50;
+            timer = setInterval(function () {
+                if (add) {
+                    num.value = (Number(num.value) + 0.01).toFixed(2);
+                    clearInterval(timer);
+                    toAdd(true);
+                } else {
+                    num.value = (Number(num.value) - 0.01).toFixed(2);
+                    clearInterval(timer);
+                    toAdd();
+                }
+            },time)
+        }
+        add.addEventListener('touchstart', function () {
+            num.value = (Number(num.value)+ 0.01).toFixed(2);
+            time = 1000;
+            toAdd(true);
+        });
+        dec.addEventListener('touchstart', function () {
+            num.value = (Number(num.value) - 0.01).toFixed(2);
+            time = 1000;
+            toAdd();
+        });
+        dec.addEventListener('touchend', function () {
+           clearInterval(timer);
+        });
+        add.addEventListener('touchend',function () {
+            clearInterval(timer);
+        });
+    }
+</script>
+<style type="text/css">
+    .con {
+        height: 4rem;
+        font-size: 1rem;
+    }
+    .con .title {
+        text-align: center;
+    }
+    .con input {
+        font-size: 3rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+    .btn span {
+        text-align: center;
+        line-height: 3rem;
+        display: inline-block;
+        margin:  1rem;
+        width:  8rem;
+        height: 3rem;
+        background-color: lightskyblue;
+    }
+</style>
+</body>
+</html>
+
+
+```
