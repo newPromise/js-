@@ -9,3 +9,10 @@ http://blog.csdn.net/sinat_27790827/article/details/52637984
 
 
 http://efe.baidu.com/blog/mobile-fixed-layout/
+
+
+https://www.zhihu.com/question/41441895
+
+https://zhuanlan.zhihu.com/p/25370825
+
+https://www.zhihu.com/search?type=content&q=javascript%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F
