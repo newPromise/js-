@@ -54,3 +54,54 @@ arr.map(function (item,index) {
 观察者模式的目的是： 通过订阅事件，发布事件，实现事件的解耦操作：
 
 传统的模式我们要实现一系列事件的变化，我们需要
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function PubSub() {
+        this.handlers = {};
+    }
+    PubSub.prototype = {
+        // 订阅事件
+        // 二维 数组，用来存储事件
+        on: function(eventType,handler){
+            if(!(eventType in this.handlers)) {
+                this.handlers[eventType] = [];
+            }
+            this.handlers[eventType].push(handler);
+            return this;
+        },
+        // 触发事件(发布事件)
+        emit: function(eventType){
+            // 使用 arguments 获得到的是 传入之外的参数
+            var handlerArgs = Array.prototype.slice.call(arguments,1);
+
+            // 通过使用 for 循环来实现发布多个事件
+            for(var i = 0; i < this.handlers[eventType].length; i++) {
+                this.handlers[eventType][i].apply(this,handlerArgs);
+            }
+            return this;
+        }
+    };// 调用方式如下：
+
+    var pubsub = new PubSub();
+
+    function con(data) {
+        console.log('yesss');
+    }
+    pubsub.on('A', con);
+
+    // 触发事件A
+
+    pubsub.emit('A',"我是参数");
+
+</script>
+</body>
+</html>
+```
