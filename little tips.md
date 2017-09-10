@@ -48,3 +48,7 @@ function person(name,age) {
 `typeOf` 用来判断变量属于哪一种类型，通过使用这种方法判断出来的几种基本类型分别是： `number` `boolean` `string` `object`  `function` `undefined` 这五种基本类型  
 ~~`instanceOf` 用来判断 变量是否属于某种基本类型~~， 这种方法返回的是布尔值， 使用 `instanceOf` 只能判断 对象和函数，不能判断字符串或者数字 
 > `instanceOf ` 这个检测方法，左边是待检测类的对象，右边是类的构造函数，实际上，使用 `instanceOf` 实现的应该是判断继承关系，我们使用 new 操作符进行继承构造函数的时候，使用的也是继承的用法
+
+问题:
+
+关于使用 position: fixed 的时候，如果仅仅设置 top: 0 出现元素在水平方向上不能水平居中的情况？？
