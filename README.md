@@ -24,3 +24,5 @@ http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.
 
 聚合数据 API
 https://www.jisuapi.com/api/train/
+
+https://juejin.im/post/593021272f301e0058273468
