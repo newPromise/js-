@@ -26,3 +26,22 @@ http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.
 https://www.jisuapi.com/api/train/
 
 https://juejin.im/post/593021272f301e0058273468
+
+const Components = {
+  Button,
+  Header,
+  Footer,
+  Swipe,
+  SwipeItem,
+  Cell
+};
+
+const install = (Vue) => {
+  Object.keys(Components).forEach((key) => {
+    Vue.component(`mp${key}`, Components[key]);
+  });
+  Vue.prototype.indicator = Indicator;
+  Vue.prototype.toast = Toast;
+};
+
+export default Object.assign({}, Components, { install });
