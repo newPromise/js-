@@ -29,6 +29,9 @@ https://juejin.im/post/593021272f301e0058273468
 
 
 http://www.codewars.com
+
+机器人
+http://bot.fastdlabs.com/
 const Components = {
   Button,
   Header,
