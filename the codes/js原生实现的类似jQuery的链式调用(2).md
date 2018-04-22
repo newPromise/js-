@@ -1,6 +1,6 @@
 // 实现使用 js 原生实现的类似与 jQuery 的链式调用第二次
 // 借助于递归实现的类似于 jQuery 的 class 链式调用
-```
+```javascript
 function $(context, fnode) {
     context = context.trim();
     let strArr = context.split(' ');
